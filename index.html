@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopOp Games</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #1b2b80 0%, #060922 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #aab;
+            margin-bottom: 50px;
+        }
+        .games {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 800px;
+        }
+        .game-card {
+            background: rgba(255,255,255,0.08);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+        }
+        .game-card h2 {
+            color: #ffd700;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .game-card p {
+            color: #ccd;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .store-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .store-link {
+            display: inline-block;
+            background: #ffd700;
+            color: #060922;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .store-link:hover { background: #ffe44d; }
+        .contact {
+            margin-top: 60px;
+            text-align: center;
+            color: #889;
+            font-size: 0.9rem;
+        }
+        .contact a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .contact a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>TopOp Games</h1>
+    <p class="subtitle">Mobile Games Studio</p>
+
+    <div class="games">
+        <div class="game-card">
+            <h2>Millionaire 2026</h2>
+            <p>Answer 15 questions of increasing difficulty, use lifelines and become a millionaire! 2000+ questions in 3 languages.</p>
+            <div class="store-links">
+                <a class="store-link" href="https://www.rustore.ru/catalog/app/com.quiz.millionaire2026" target="_blank">RuStore</a>
+                <a class="store-link" href="https://appgallery.huawei.com/app/C117378611" target="_blank">AppGallery</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>Contact: <a href="mailto:TopOpGames@yandex.com">TopOpGames@yandex.com</a></p>
+        <p style="margin-top: 8px;"><a href="/app-ads.txt">app-ads.txt</a></p>
+    </div>
+</body>
+</html>
