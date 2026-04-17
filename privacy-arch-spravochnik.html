@@ -60,6 +60,8 @@
         }
         .policy-section { display: none; }
         .policy-section.active { display: block; }
+        .hdr { display: none; }
+        .hdr.active { display: inline; }
         .updated {
             font-size: 0.85rem;
             color: #889;
@@ -83,8 +85,14 @@
 <body>
     <div class="container">
         <a href="/" class="back-link">&larr; TopOp Games</a>
-        <h1>Privacy Policy</h1>
-        <p class="app-name">Arch-Reference / Арх-Справочник</p>
+        <h1>
+            <span class="hdr en">Privacy Policy</span>
+            <span class="hdr ru active">Политика конфиденциальности</span>
+        </h1>
+        <p class="app-name">
+            <span class="hdr en">Arch-Reference</span>
+            <span class="hdr ru active">Арх-Справочник</span>
+        </p>
 
         <div class="lang-switcher">
             <button class="lang-btn" onclick="switchLang('en')">English</button>
@@ -118,6 +126,7 @@
                 <li>Тип сети (Wi-Fi / мобильная)</li>
             </ul>
             <p>Эти данные используются исключительно для показа релевантной рекламы. <a href="https://yandex.ru/legal/confidential/" target="_blank">Политика конфиденциальности Яндекса</a>.</p>
+            <p>Яндекс — российская компания, и все данные, собираемые Yandex Mobile Ads SDK, обрабатываются и хранятся на серверах Яндекса, расположенных на территории Российской Федерации, в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».</p>
 
             <h2>4. Разрешения</h2>
             <p>Приложение запрашивает разрешение на доступ к интернету и рекламный идентификатор. Никаких других разрешений (камера, микрофон, местоположение, контакты) не требуется.</p>
@@ -165,6 +174,7 @@
                 <li>Network type (Wi-Fi / mobile)</li>
             </ul>
             <p>This data is used solely for displaying relevant advertisements. <a href="https://yandex.ru/legal/confidential/" target="_blank">Yandex Privacy Policy</a>.</p>
+            <p>Yandex is a Russian company, and all data collected by the Yandex Mobile Ads SDK is processed and stored on Yandex servers located in the Russian Federation, in accordance with Federal Law No. 152-FZ "On Personal Data".</p>
 
             <h2>4. Permissions</h2>
             <p>The App requests internet access and advertising identifier permissions. No other permissions (camera, microphone, location, contacts) are required.</p>
@@ -190,7 +200,9 @@
         function switchLang(lang) {
             document.querySelectorAll('.policy-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.hdr').forEach(h => h.classList.remove('active'));
             document.getElementById('lang-' + lang).classList.add('active');
+            document.querySelectorAll('.hdr.' + lang).forEach(h => h.classList.add('active'));
             event.target.classList.add('active');
         }
     </script>
